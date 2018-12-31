@@ -12,7 +12,7 @@ function Declare(b::Int)
         $sym(b::$int) = reinterpret($sym,b)
         Base.$int(b::$sym) = reinterpret($int,b)
         function Base.getindex(b::$sym,i::I) where I<:Integer
-            d = $int(2)^(i-1)
+            d = one($int) << (i-1)
             return (d & $int(b)) == d
         end
         Base.getindex(b::$sym,i::UnitRange{<:Integer}) = [getindex(b,j) for j ∈ i]
