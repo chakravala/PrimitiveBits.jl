@@ -1,0 +1,6 @@
+authors = ["Michael Reed <18372368+chakravala@users.noreply.github.com>"]
+name = "PrimitiveBits"
+uuid = "ac510f7e-0d31-11e9-342b-3d47b1bc6638"
+version = "0.1.0"
+
+[deps]
